@@ -1,0 +1,62 @@
+<aura:component controller = "DisplayCustomerListClass"
+                implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" 
+                access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="CustomerList" type="HDFC_Customer_Details__c[]"/>
+    <!--For Displaying Header-->
+    <div class = "slds-page-header">
+        <div class = "slds-media__body">
+            <h1 class="slds-page-header__title slds-truncate slds-allign-middle">Welcome To HDFC Insurance</h1>
+        </div>
+    </div>
+    <!--For displaying Card-->
+    <article class="slds-card">
+        <div class="slds-card__Header slds-grid">
+            <header class="slds-media slds-media_Center slds-has-flexi-truncate">
+                <h2>
+                    <span class="slds-text-heading__small">List Of Customers</span>
+                </h2>
+            </header>                           
+        </div>
+    </article>
+    <!-- This is for displaying the Table-->
+    <div class="slds-card__body">
+        <table class="slds-table slds-table_broadned slds-no-row-table">
+            <thead>
+                <tr class="slds-text-title_caps">
+                    <th scope="col">
+                        <div class="slds-truncate" title="First Name">First Name</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Last Name">Last Name</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Email">Email</div>
+                    </th>
+                </tr>
+             </thead>
+            <tbody>
+                <!--Iteration count-->
+                <aura:iteration items="{!v.CustomerList}" var="cus">
+                    <tr class="slds-hint-parent">
+                        <th scope="row">
+                            <div class="slds-truncate">
+                                <a href="javascript:void(0);">{!cus.Name}</a> 
+                                
+                              </div>
+                            </th>
+                        <td>
+                            <div class="slds-truncate">{!cus.Last_Name__c}</div>
+      
+                        </td>
+                        
+                        <td>
+                            <div class="slds-truncate" title="{!cus.Email__c}">{!cus.Email__c}</div>
+  
+                        </td>     
+                    </tr>
+                </aura:iteration>
+            </tbody>
+        </table>
+    </div>
+</aura:component>

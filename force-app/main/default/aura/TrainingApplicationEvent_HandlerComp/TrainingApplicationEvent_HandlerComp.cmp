@@ -1,0 +1,7 @@
+<aura:component >
+    <aura:attribute name="MessageFromEvent" type = "String"/>
+    <aura:attribute name="EventTriggeredCount" type="Integer" default = "0"/>
+    <aura:handler   event = "c:TrainingApplicationEvent_Event" action = "{!c.HandleEvent}"/>
+    <p>{!v.MessageFromEvent}</p>
+    <p>{!v.EventTriggeredCount}</p>
+</aura:component>

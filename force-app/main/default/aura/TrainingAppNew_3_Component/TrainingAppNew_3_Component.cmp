@@ -1,0 +1,18 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" 
+                access="global" >
+    <aura:attribute name="VoteCheck" type="Boolean" default="" />    
+<ui:inputtext aura:id="FirstName" label="First Name"/>
+<ui:inputtext aura:id="LastName" label="Last Name"/>
+<ui:inputtext aura:id="Age" label="Age"/>
+<ui:button aura:id="Submit" label="Submit" press="{!c.CheckEligibility}"/>    
+<ui:outputtext aura:id="output" value="" />	
+    
+    <aura:if isTrue = "{!v.VoteCheck}">
+        <ui:button aura:id="CastVote" label="Vote"/>
+        You can vote
+     <aura:set attribute="else">
+         <ui:button aura:id="CancelVote" label="Cancel Vote"/> 
+         You cannot Vote
+        </aura:set>
+    </aura:if>
+</aura:component>

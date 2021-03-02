@@ -1,0 +1,6 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	 <aura:registerEvent name="AppEvent" type="c:TrainingApplicationEvent_Event"/>
+    <h1>Case Study Of CompnentEvent</h1>
+    <p><lightning:button label = "click here to fire the event" onclick="{!c.HandleEvent}">
+        </lightning:button></p>
+</aura:component>

@@ -1,0 +1,8 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" 
+                access="global" >
+    
+    <aura:iteration items = "1,2,3,4,5" var = "item">
+    <meter value = "{!item/5}" />
+    </aura:iteration>
+	
+</aura:component>

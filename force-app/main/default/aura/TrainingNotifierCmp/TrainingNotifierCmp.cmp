@@ -1,0 +1,6 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId"
+                access="global" >
+    <aura:registerEvent name="cmpevent" type="c:TrainingNotifierCmpEvent"/>
+    <h1>Case Study Of CompnentEvent</h1>
+    <lightning:button label="Click to fire the event" onclick="{!c.fireComponentEvent}"/>
+</aura:component>

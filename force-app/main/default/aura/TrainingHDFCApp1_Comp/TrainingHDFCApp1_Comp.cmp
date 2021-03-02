@@ -1,0 +1,41 @@
+<aura:component controller="HDFCCustomerDetails" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" 
+                access="global" >
+    <!--Declaring the Attribute for sobejct-->
+	<aura:attribute name="Customer" type="HDFC_Customer_Details__c"
+                    default="{'sobjectType':'HDFC_Customer_Details__c',
+                             'Name':'',
+                             'Last_Name__c':'',
+                             'Email__c':'',
+                             'Salary__c':''}"/>
+    <div class="container-fluid">
+    <h3>Please Enter Customer Details</h3>
+     <!--For Entering the First name-->
+     <div class="form-group">
+         <label>First Name: </label>
+         <ui:inputtext class="form-control" value="{!v.Customer.Name}"/>
+        </div>
+        
+     <!--For Entering the Last name-->
+     <div class="form-group">
+         <label>Last Name: </label>
+         <ui:inputtext class="form-control" value="{!v.Customer.Last_Name__c}"/>
+        </div>
+        
+     <!--For Entering the Email-->
+     <div class="form-group">
+         <label>Email Id:  </label>
+         <ui:inputtext class="form-control" value="{!v.Customer.Email__c}"/>
+        </div>
+    
+     <!--For Entering the Salary-->
+     <div class="form-group">
+         <label>Salary:  </label>
+         <ui:inputtext class="form-control" value="{!v.Customer.Salary__c}"/>
+        </div>
+    <!--For Crete Button-->
+     <div class="col-md-4 text-center">
+         <ui:button class="form-control" press="{!c.CreateCustomer}">Create</ui:button>
+        </div>
+    </div>
+    
+</aura:component>

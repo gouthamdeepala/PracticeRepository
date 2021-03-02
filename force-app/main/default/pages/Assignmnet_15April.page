@@ -1,0 +1,18 @@
+<apex:page controller="Assignmnet_15APr">
+<apex:form >
+<apex:pageBlock Title="Name">
+<apex:pageBlockButtons >
+<apex:commandButton Value="Save" Action="{!Save}"/> 
+<apex:outputLabel > {!FullName} </apex:outputLabel>    
+</apex:pageBlockButtons>
+<apex:pageBlockSection Title="Content" columns="2">
+<apex:outputLabel > First Name: </apex:outputLabel>                                                  
+<apex:inputText Value="{!FirstName}"/> 
+<apex:outputLabel > Middle Name: </apex:outputLabel>  
+<apex:inputText Value="{!MiddleName}"/> 
+<apex:outputLabel > Last Name: </apex:outputLabel>      
+<apex:inputText Value="{!LastName}"/>     
+</apex:pageBlockSection>    
+</apex:pageBlock>>   
+</apex:form>    
+</apex:page>

@@ -1,0 +1,12 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" 
+                access="global" >
+	<p>Device is Tablet : "{!$Browser.isTablet}"</p>
+    <p>Device is Phone : "{!$Browser.isPhone}"</p>
+    <p>Device is Andriod : "{!$Browser.isAndroid}"</p>
+    <p>The Form is fillign in : "{!$Browser.formFactor}"</p>
+     
+    <p>The Language of the user is : "{!$Locale.language}"</p>
+     <p>The timeZone of the user is : "{!$Locale.timezone}"</p>
+     <p>The currency of the user is : "{!$Locale.currency}"</p>
+    
+</aura:component>

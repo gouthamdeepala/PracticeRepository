@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name = "MessageFromEvent" type = "String"/>
+    <aura:attribute name= "CountofEvent" type="Integer" default="0"/>
+    <aura:handler name = "cmpevent" event = "c:PracticeEvent" action = "{!c.HandlerComponent}"/>
+    <c:NotifierCmp_19Nov></c:NotifierCmp_19Nov>
+    <p>{!v.MessageFromEvent}</p>
+    <br/>
+    <h1>Number of events fires is {!v.CountofEvent}</h1>
+</aura:component>

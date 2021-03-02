@@ -1,0 +1,22 @@
+<apex:page standardController="Lead" extensions="Assignment_16Apr">
+<apex:form >
+
+<apex:pageBlock Title="Block1 For Srandard Controller" >
+<apex:pageBlockSection columns="2">
+<apex:inputField Value="{!Lead.FirstName}"/> 
+<apex:pageBlockSectionItem >Last Name:<apex:inputField Value="{!Lead.LastName}" Required="True"/> </apex:pageBlockSectionItem>
+<apex:pageBlockSectionItem >Company:<apex:inputField Value="{!Lead.Company}" Required="False" /> </apex:pageBlockSectionItem>
+<apex:pageBlockSectionItem ><apex:commandButton value="Save" Action="{!save}"/> </apex:pageBlockSectionItem>    
+</apex:pageBlockSection>
+</apex:pageBlock>   
+<apex:pageBlock Title="Block2 For Custom Controller">
+<apex:pageBlockSection columns="2">
+<apex:pageBlockSectionItem >First Name:<apex:inputText Value="{!FirstName}" Required="true"/> </apex:pageBlockSectionItem>
+<apex:pageBlockSectionItem >Last Name:<apex:inputText Value="{!LastName}"/> </apex:pageBlockSectionItem>
+<apex:pageBlockSectionItem >Company:<apex:inputText Value="{!Company}"/> </apex:pageBlockSectionItem>
+<apex:pageBlockSectionItem ><apex:commandButton value="Save" Action="{!SaveAs}"/> </apex:pageBlockSectionItem>  
+<apex:outputLabel >{!Message}</apex:outputLabel>    
+</apex:pageBlockSection>        
+</apex:pageBlock> 
+</apex:form>
+</apex:page>

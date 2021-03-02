@@ -1,0 +1,10 @@
+<aura:component controller="Reynoldpens" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" 
+                access="global">
+	<aura:attribute name="Customer" type="Reynold__c" default = "{'sobjecttype':'Reynold__C',
+                                                                   'Name':'',
+                                                                   'Price__c':''}"/>
+    <ui:inputtext label="First Name" value ="{!v.Customer.Name}"/>
+    <ui:inputtext label = "Price"  value = "{!v.Customer.Price__c}"/>
+    <ui:button label="Submit" press="{!c.InsertRecord}"/>
+                    
+</aura:component>

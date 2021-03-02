@@ -1,0 +1,14 @@
+<aura:component>
+    <aura:attribute name = "EligiblityCheck" Type = "boolean" default = "true"></aura:attribute>
+    <ui:inputtext label = "First Name" aura:id = "First Name" placeHolder = "Goutham"></ui:inputtext>
+    <ui:inputtext label = "Last Name" aura:id = "Last Name"/>
+    <ui:inputtext label = "Age" aura:id = "Agec"/>
+    <ui:button label = "Check Eligibility" aura:id = "CheckEligilibity" press="{!c.getEligibility}"/>
+    <ui:outputtext aura:id="output" value = ""/>
+    <aura:if isTrue =  "{!v.EligiblityCheck}" >
+    you can vote    
+    <aura:set attribute = "else">
+    you cannot vote    
+    </aura:set>
+   </aura:if>      
+</aura:component>

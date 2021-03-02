@@ -1,0 +1,14 @@
+<apex:page >
+    <apex:includeLightning />
+    <div id="lightning" />
+    <script>
+        $Lightning.use("c:TrainingAppDataFetch", function(){
+        $Lightning.createComponent(
+        "c:TrainingAppDataFetch_comp",
+            {},
+            'lightning',
+            function(cmp){
+        });
+        });
+    </script>
+</apex:page>

@@ -1,0 +1,16 @@
+<apex:page StandardController="Lead">
+<apex:form >
+<apex:pageblock title="My Lead">
+<apex:pageblockButtons >
+<apex:commandButton action="{!Save}" Value="Save"/>
+</apex:pageblockButtons>
+<apex:pageblocksection title="Content" Columns="3">
+<apex:inputField value="{!Lead.FirstName}"/>
+<apex:inputField value="{!Lead.LastName}"/>
+<apex:inputfield Value="{!Lead.Email}"/>
+<apex:inputfield Value="{!Lead.Company}"/>
+<apex:inputfield Value="{!Lead.MobilePhone}"/>
+</apex:pageblocksection>
+</apex:pageBlock>
+</apex:form>
+</apex:page>
