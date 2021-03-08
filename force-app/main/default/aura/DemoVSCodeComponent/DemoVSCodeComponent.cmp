@@ -1,0 +1,6 @@
+<aura:component>
+    <aura:attribute name="Output" type="string"></aura:attribute>
+<lightning:input aura:id="input" type="string"></lightning:inputtext>
+<lightning:button label="Click Here" onclick="{!c.CallFunction}"></lightning:button>
+<ui:outputText name="output" value="{!v.Output}"></ui:outputText> 
+</aura:component>	
